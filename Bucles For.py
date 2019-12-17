@@ -1,4 +1,4 @@
-#Bucles For 
+#Bucles For
 
 for i in [1,2,3]:
 	print("Hola!", end=" ")
@@ -31,5 +31,3 @@ else:
 
 for i in range (5):
 	print(i)
-
-

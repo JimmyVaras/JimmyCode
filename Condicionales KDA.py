@@ -1,6 +1,6 @@
 print("Bienvenido a la interfaz de evaluación de partidas 'KDAnivia'")
 
-print("Las valoraciones van desde 'S' hasta 'D', siendo S la nota más alta posible")
+print("Las valoraciones van desde 'S' hasta 'D', siendo S la nota más alta ")
 
 kills=input("Introduce el número de Kills: ")
 deaths=input("Introduce el número de Muertes: ")
@@ -32,6 +32,6 @@ def eval(score):
 
 	return valoración
 
-print(" ")	
+print(" ")
 print(" ")
 print("La valoración de tu partida es:", eval(score), "!")

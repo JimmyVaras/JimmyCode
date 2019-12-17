@@ -8,8 +8,8 @@ print("Tienes", hermanos, "en el centro")
 
 salario=int(input("Introduce el salario familiar anual:"))
 print("Salario familiar:", salario)
- 
-if distancia>=40 and hermanos>2 and salario>=20000:
+
+if distancia>=40 and hermanos>2 and salario>= 20000:
 	print("Puedes conseguir la beca")
 else:
 	print("No optas a beca")
@@ -18,7 +18,7 @@ else:
 
 print(" ")
 print("Vamos a evaluar las probabilidades de obtener la beca siendo más justos.")
- 
+
 if distancia>=40 and hermanos>2 or salario<=20000:
 	print("Puedes conseguir la beca")
 else:
@@ -32,7 +32,6 @@ nada=input("Pulsa para avanzar")
 
 print("Aginaturas optativas 2020")
 print("Opciones: Informática gráfica - Pruebas de Software - Dibujo Técnico")
-
 opcion=input("Escribe la asignatura que prefieras:")
 asignatura=opcion.lower()
 
@@ -42,5 +41,3 @@ if asignatura in ("informática gráfica", "pruebas de software", "dibujo técni
 	print("Asignatura elegida:" + asignatura)
 else:
 	print("La asignatura escogida no está disponible")
-
-

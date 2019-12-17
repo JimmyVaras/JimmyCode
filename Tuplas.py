@@ -1,7 +1,7 @@
 miTupla=("Jimmy", 5, 5, 2003)
 
 print(miTupla[2])
-	
+
 #Convertir tupla en lista
 
 miLista=list(miTupla)
@@ -48,5 +48,3 @@ print(nombre)
 print(dia)
 print(mes)
 print(año)
-
- 
