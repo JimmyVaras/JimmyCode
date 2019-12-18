@@ -1,3 +1,5 @@
+# Bucles usando el tipo range TODO
+
 valido=True
 
 email=input("Introduce tu email: ")
@@ -12,3 +14,5 @@ if valido==True:
     print(f"Tu correo es {email}")
 else:
     print("Que te den")
+
+# Bucle while
