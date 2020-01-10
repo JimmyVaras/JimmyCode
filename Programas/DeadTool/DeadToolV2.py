@@ -1,14 +1,9 @@
 import random
-import math
 import pickle
 import time
+import os
 
-try:
-  data = open("data","rb")
-  objeto = pickle.load(data)
-  #print(f"Tus objetos son: {objeto[0]}, {objeto[1]} y unas {objeto[2]}")
-  data.close()
-except:
+def createdata():
   nuevos = []
   uno = str(input("¿Cual va a ser tu primer objeto? Escribelo: "))
   nuevos.append(uno)
@@ -20,32 +15,44 @@ except:
   pickle.dump(nuevos,data)
   data.close()
 
+try:
+  data = open("data","rb")
+  saved = pickle.load(data)
+  data.close()
+except:
+  createdata()
+
 data = open("data","rb")
-objeto = pickle.load(data)
+saved = pickle.load(data)
 
-inv1 = objeto[0]
-inv2 = objeto[1]
-inv3 = objeto[2]
+inv1 = saved[0]
+inv2 = saved[1]
+inv3 = saved[2]
 nuevos=[inv1,inv2,inv3]
+try:
+	trist = saved[3]
+	chung = saved[4]
+except:
+	trist = 0
+	chung = 0
 
-print(f"Empiezas la aventura con {objeto[0]}, {objeto[1]} y {objeto[2]}. Suerte!")
+data.close()
 
-input("Enter para continuar")
+print(f"Empiezas la aventura con {saved[0]}, {saved[1]} y {saved[2]}. Suerte!")
 
-trist = 0
-chung = 0
+input("-----Enter para continuar-----\n")
 
 def dado():
 	resul = random.randint(1,6)
 	return resul
 
-print("Cada ve que quieras lanzar el dado escribe dado.")
-print("Si quieres intercambiar un objeto escribe el numero del slot donde lo quieres colocar: 1, 2 o 3.")
+print("Cada ve que quieras lanzar el dado escribe 'dado'.")
+print("Si quieres intercambiar un obsavedjeto escribe el numero del slot donde lo quieres colocar: 1, 2 o 3.")
 print("Para aumentar en 1 la tristeza escribe 'trist' y para la chungez 'chung'. ")
 print("Para ver tu inventario escribe 'inventario'. ")
 print("Para ver tus estadisticas escribe 'stats'. ")
-print("Para empezar un enfrentamiento escribe 'batalla' ")
-print("Para finalizar el programa usa: `end´ ")
+print("Para empezar un enfrentamiento escribe 'batalla'. ")
+print("Para finalizar el programa usa: 'end'. ")
 
 def prop(com):
 	global inv1
@@ -53,6 +60,7 @@ def prop(com):
 	global inv3
 	global trist
 	global chung
+	global data
 
 	if com == "1":
 		inv1 = str(input(f"Escribe el nuevo objeto para sustituir a tu {inv1}: "))
@@ -60,6 +68,9 @@ def prop(com):
 		inv2 = str(input(f"Escribe el nuevo objeto para sustituir a tu {inv2}: "))
 	elif com == "3":
 		inv3 = str(input(f"Escribe el nuevo objeto para sustituir a tu {inv3}: "))	
+
+	elif com == "inventario":
+		print(f"Ahora mismo llevas:\n-{saved[0]} \n-{saved[1]} \n-{saved[2]}\n!Suerte!")
 
 	elif com == "dado":
 		print(dado())	
@@ -90,13 +101,19 @@ def prop(com):
 		print(f"Tu chunguéz esta en {chung}.")
 
 	elif com == "end":
-		nuevos = [inv1,inv2,inv3]
+		nuevos = [inv1,inv2,inv3,trist,chung]
 		data = open("data","wb")
 		pickle.dump(nuevos,data)
 		data.close()
 		time.sleep(0.75)
 		quit()
 		print("Se han guardado tus datos, programa finalizado")
+
+	elif com == "borrar":
+		data.close()
+		os.remove("C:/Users/Varas Caceres/Documents/GitHub/JimmyCode/Programas/DeadTool/data")
+		print("Se han borrado todos los datos anteriores")
+		createdata()
 
 	else:
 		print("Acción inexistente, intentalo de nuevo.")
