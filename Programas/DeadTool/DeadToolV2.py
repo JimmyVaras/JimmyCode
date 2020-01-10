@@ -82,7 +82,10 @@ def prop(com):
 		inv3 = str(input(f"Escribe el nuevo objeto para sustituir a tu {inv3}: "))	
 
 	elif com == "inventario":
+		data = open("data","rb")
+		saved = pickle.load(data)
 		print(f"Ahora mismo llevas:\n-{saved[0]} \n-{saved[1]} \n-{saved[2]}\n!Suerte!")
+		data.close()
 
 	elif com == "dado":
 		print(dado())	
@@ -101,7 +104,7 @@ def prop(com):
 			print("El enemigo gana el enfretamiento\n")
 		else:
 			print("Ganas el enfretamiento\n")
-			
+
 	elif com == "stats":
 		print(f"Tu puntos de Tristeza actuales son {trist} y tienes {chung} puntos de chunguéz.\n")	
 
@@ -119,8 +122,8 @@ def prop(com):
 		pickle.dump(nuevos,data)
 		data.close()
 		print("Programa creado por Jaime Varas \n-TW: @JimmyDaBlue \n-GitHub: github.com/JimmyVaras\
-		 \n______Gracias por usarlo______\n© DeadTool v2.3 , JimmyVaras \nCopyright (c) 2019 JimmyVaras \nAll Rights Reserved\n")
-		time.sleep(0.75)
+		 \n______Gracias por usarlo______\n© DeadTool v2.44 , JimmyVaras \nCopyright (c) 2019 JimmyVaras \nAll Rights Reserved\n")
+		time.sleep(2.5)
 		print("Se han guardado tus datos, programa finalizado")
 		time.sleep(1)
 		webbrowser.open("https://twitter.com/JimmyDaBlue", new=1, autoraise=True)
@@ -132,6 +135,7 @@ def prop(com):
 		data.close()
 		dir_path = os.path.dirname(os.path.realpath(__file__))
 		os.remove(f"{dir_path}/data")
+		#os.remove("C:/Users/Varas Caceres/Documents/GitHub/JimmyCode/Programas/DeadTool/data")
 		print("Se han borrado todos los datos anteriores\n")
 		createdata()
 
