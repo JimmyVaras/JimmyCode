@@ -101,6 +101,7 @@ def prop(com):
 			print("El enemigo gana el enfretamiento\n")
 		else:
 			print("Ganas el enfretamiento\n")
+			
 	elif com == "stats":
 		print(f"Tu puntos de Tristeza actuales son {trist} y tienes {chung} puntos de chunguéz.\n")	
 
