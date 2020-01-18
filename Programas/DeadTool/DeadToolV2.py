@@ -56,7 +56,7 @@ def dado():
 # ---------------- INSTRUCCIONES ----------------------
 
 print("Cada ve que quieras lanzar el dado escribe 'dado'.")
-print("Si quieres intercambiar un obsavedjeto escribe el numero del slot donde lo quieres colocar: 1, 2 o 3.")
+print("Si quieres intercambiar un objeto escribe el numero del slot donde lo quieres colocar: 1, 2 o 3.")
 print("Para aumentar en 1 la tristeza escribe 'trist' y para la chungez 'chung'. ")
 print("Para ver tu inventario escribe 'inventario'. ")
 print("Para ver tus estadisticas escribe 'stats'. ")
