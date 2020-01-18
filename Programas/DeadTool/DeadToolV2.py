@@ -56,7 +56,7 @@ def dado():
 # ---------------- INSTRUCCIONES ----------------------
 
 print("Cada ve que quieras lanzar el dado escribe 'dado'.")
-print("Si quieres intercambiar un obsavedjeto escribe el numero del slot donde lo quieres colocar: 1, 2 o 3.")
+print("Si quieres intercambiar un objeto escribe el numero del slot donde lo quieres colocar: 1, 2 o 3.")
 print("Para aumentar en 1 la tristeza escribe 'trist' y para la chungez 'chung'. ")
 print("Para ver tu inventario escribe 'inventario'. ")
 print("Para ver tus estadisticas escribe 'stats'. ")
@@ -135,7 +135,6 @@ def prop(com):
 		data.close()
 		dir_path = os.path.dirname(os.path.realpath(__file__))
 		os.remove(f"{dir_path}/data")
-		#os.remove("C:/Users/Varas Caceres/Documents/GitHub/JimmyCode/Programas/DeadTool/data")
 		print("Se han borrado todos los datos anteriores\n")
 		createdata()
 
@@ -157,4 +156,3 @@ while True:
  
 #This product is protected by copyright and distributed under
 #licenses restricting copying, distribution, and decompilation.
-
