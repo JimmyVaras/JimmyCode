@@ -10,7 +10,6 @@ print(f"Hoy es día {today.day} de {meses[(today.month)]} del año {today.year}"
 cumple = datetime.date(2005, 5, 5)
 
 
-print(f"Tu cumple es el día {cumple.day} de {meses[(cumple.month)]} del año {cumple.year}.\n")
-
+print(f"Naciste el día {cumple.day} de {meses[(cumple.month)]} del año {cumple.year}.\n")
 
 
