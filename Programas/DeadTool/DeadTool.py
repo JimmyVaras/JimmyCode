@@ -73,19 +73,68 @@ def prop(com):
 	global trist
 	global chung
 	global data
+	global nuevos
 
 	if com == "1":
+		data = open("data","rb")
+		saved = pickle.load(data)
+
+		inv1 = saved[0]
+		inv2 = saved[1]
+		inv3 = saved[2]
+		nuevos=[inv1,inv2,inv3]
+
+		data.close()
+
 		inv1 = str(input(f"Escribe el nuevo objeto para sustituir a tu {inv1}: "))
+		nuevos=[inv1,inv2,inv3]
+		data = open("data","wb")
+		pickle.dump(nuevos,data)
+		data.close()
 	elif com == "2":
+		data = open("data","rb")
+		saved = pickle.load(data)
+
+		inv1 = saved[0]
+		inv2 = saved[1]
+		inv3 = saved[2]
+		nuevos=[inv1,inv2,inv3]
+		data.close()
+
 		inv2 = str(input(f"Escribe el nuevo objeto para sustituir a tu {inv2}: "))
+		nuevos=[inv1,inv2,inv3]
+		data = open("data","wb")
+		pickle.dump(nuevos,data)
+		data.close()
 	elif com == "3":
-		inv3 = str(input(f"Escribe el nuevo objeto para sustituir a tu {inv3}: "))	
+		data = open("data","rb")
+		saved = pickle.load(data)
+
+		inv1 = saved[0]
+		inv2 = saved[1]
+		inv3 = saved[2]
+		nuevos=[inv1,inv2,inv3]
+		data.close()
+
+		inv3 = str(input(f"Escribe el nuevo objeto para sustituir a tu {inv3}: "))
+		nuevos=[inv1,inv2,inv3]
+
+		data = open("data","wb")
+		pickle.dump(nuevos,data)
+		data.close()
 
 	elif com == "inventario":
 		data = open("data","rb")
 		saved = pickle.load(data)
-		print(f"Ahora mismo llevas:\n-{saved[0]} \n-{saved[1]} \n-{saved[2]}\n!Suerte!")
+
+		inv1 = saved[0]
+		inv2 = saved[1]
+		inv3 = saved[2]
+		nuevos=[inv1,inv2,inv3]
+
 		data.close()
+
+		print(f"Ahora mismo llevas:\n-{inv1} \n-{inv2} \n-{inv3}\n!Suerte!")
 
 	elif com == "dado":
 		print(dado())	
