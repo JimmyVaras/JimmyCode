@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <link rel=" icon" type=”image/png” href="static/favicon.png">
+  <title>Ejercicio 5 - Mapas interactivos</title>
+  <!-- BOOTSTRAP 4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <script src="java.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="static/main.css">
+</head>
+
+<body>
+  <style media="screen">
+    body {
+      background-color: #b4e8a5;
+    }
+  </style>
+  <!-- NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="home.html">HTML</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ejercicios</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="Ejercicio_1.html">Ejercicio 1</a>
+            <a class="dropdown-item" href="Ejercicio_2.html">Ejercicio 2</a>
+            <a class="dropdown-item" href="Ejercicio_3.html">Ejercicio 3</a>
+            <a class="dropdown-item" href="Ejercicio_4.html">Ejercicio 4</a>
+            <a class="dropdown-item" href="Ejercicio_5.html">Ejercicio 5</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/JimmyVaras/JimmyCode/tree/master/Programas/Ejercicios%20HTML" target="_blank">Código de la web</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" aria-disabled="true">Más...</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- NAVBAR-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <img src="lambos/irlanda.png" alt="Mapa de Irlanda" usemap="#mapa">
+        <map name="mapa">
+          <area shape="circle" coords="528,341,11" href="https://www.dublin.es/" alt="Dublín" target="_blank">
+          <area shape="poly" coords="305,165,406,69,572,0,633,187,526,218,483,228,437,168,407,218" href="https://discovernorthernireland.com/" target="_blank" alt="Irlanda del Norte">
+          <area shape="poly" coords="0,560,171,636,520,520,630,520,630,660,0,660" href="https://es.wikipedia.org/wiki/Mar_Cant%C3%A1brico" target="_blank" alt="Mar Cantábrico">
+        </map>
+      </div>
+      <div class="col-sm">
+        <div class="card" style="width: 18rem;">
+          <img src="lambos/cliff.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="https://1drv.ms/p/s!ArsAn30xTtO5rUH49JhUX1x_sfLU?e=K9EpX7" target="_blank" class="btn btn-primary">Ver presentación</a>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="lambos/castillo.jpg" class="card-img-top" alt="Castillo Irlanda">
+            <div class="card-body">
+              <h5 class="card-title">Irlanda en Inglés</h5>
+              <p class="card-text">Aquí puedes ver una presentación realizada por mí para un trabajo de Inglés, en 4º de ESO.</p>
+              <a href="https://1drv.ms/p/s!ArsAn30xTtO5uxe6NIpGBYkzFasd?e=pPw3gL" target="_blank" class="btn btn-primary">Ver Presentación</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
