@@ -1,14 +1,15 @@
 
 /* change the background color */
-.navbar{
+.navbar {
   background-color: #329bc8 !important;
+  margin-bottom: 15px !important;
 }
-.navbar .narbar-brand{
-  color: #2dd2cd
+.navbar .narbar-brand {
+  color: #2dd2cd !important;
 }
-.navbar .narbar-brand:hover{
+.navbar .narbar-brand:hover {
   color: #2dd2cd;
 }
-.navbar .narbar-brand li a{
+.navbar .narbar-brand li a {
   color: #2dd2cd;
 }
