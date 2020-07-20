@@ -3,8 +3,8 @@
 for i in [1,2,3]:
 	print("Hola!", end=" ")
 
-for i in ["Invierno","Primavera","Verano"]:
- 	print(i)
+for i in ["Invierno", "Primavera", "Verano"]:
+    print(i)
 
 #Bucles tipo Range
 
