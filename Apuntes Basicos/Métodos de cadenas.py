@@ -25,7 +25,7 @@ print("Tu palabra tiene la letra 'A'", word1.count("a"), "veces")
 mail = input("Introduce tu correo: ")
 arroba = mail.find("@")
 #print("El arroba se encuentra en la posición", arroba)
-print("Tu nombre de usuario será:", mail[0:arroba].capitalize())
+print("Tu nombre de usuario será:", mail[:arroba].capitalize())
 
 # Comprobar que son digitos.
 
@@ -47,4 +47,11 @@ while age1.isalpha() is False:
 
 print("Tu nombre es:", name1)
 
-#
+# Separa un string buscando espacios o lo que se especifique.
+
+sentence = input("Introduce una frase: ")
+print(sentence.split())
+
+# Borrar espacios al final de un string
+
+print(sentence.strip())
