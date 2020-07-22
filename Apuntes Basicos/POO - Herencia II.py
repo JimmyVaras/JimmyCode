@@ -40,7 +40,7 @@ class Car(vehicle):
         else:
             engine = "Apagado"
 
-        print(f"\nMarca: {self.brand} \nModelo: {self.model} \nFunciona en {self.terrain} \nMotor: {engine} \nAsientos: {EMX}")
+        print(f"\nMarca: {self.brand} \nModelo: {self.model} \nFunciona en {self.terrain} \nMotor: {engine} \nAsientos: {EMX} \n")
         time.sleep(1)
 
 
@@ -58,15 +58,20 @@ class ElectricVehicle():
 
         while self.charging is True and self.battery < 100:
             self.battery += random.randint(5,14)
-            print(f"Batería: {self.battery}%")
+            print(f"Batería: {self.battery}% \n")
             time.sleep(0.8)
         if self.battery >= 100:
-            print("Batería cargada con éxito")
+            print("------Batería cargada con éxito------ \n")
 
     def status(self):
-        print(f"Batería al {self.battery}%")
+        print(f"Batería al {self.battery}% \n")
+
 
 ElonMust = Car("Tesla", "Model Y", "carretera")
+
+
+class ElectricCar(Car, ElectricVehicle):
+    pass
 
 
 EMX = ElonMust.register()
@@ -78,5 +83,12 @@ BiciElectrica = ElectricVehicle()
 BiciElectrica.status()
 time.sleep(0.2)
 print("Enchufando bici eléctrica para cargar...")
+time.sleep(0.5)
+print(".")
+time.sleep(0.3)
+print(".")
+time.sleep(0.3)
+print(".")
+time.sleep(0.3)
 time.sleep(0.2)
 BiciElectrica.charge()
