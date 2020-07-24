@@ -24,7 +24,7 @@ print("Tu palabra tiene la letra 'A'", word1.count("a"), "veces")
 
 mail = input("Introduce tu correo: ")
 arroba = mail.find("@")
-#print("El arroba se encuentra en la posición", arroba)
+# print("El arroba se encuentra en la posición", arroba)
 print("Tu nombre de usuario será:", mail[:arroba].capitalize())
 
 # Comprobar que son digitos.
